@@ -1,6 +1,16 @@
-#include <iostream>
+//#include <iostream>
+#include <Windows.h>
+#include "Player.h"
+
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    SetConsoleCP(CP_UTF8);        // Кодировка ввода
+    SetConsoleOutputCP(CP_UTF8);  // Кодировка вывода
+
+
+
+    Player::printStats(Player::health(), Player::attPower());
+
+
 }
