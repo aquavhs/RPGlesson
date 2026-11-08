@@ -1,6 +1,7 @@
 //#include <iostream>
 #include <Windows.h>
 #include "Player.h"
+#include "Enemy.h"
 
 
 int main()
@@ -9,8 +10,11 @@ int main()
     SetConsoleOutputCP(CP_UTF8);  // Кодировка вывода
 
 
-
+    Player::name();
     Player::printStats(Player::health(), Player::attPower());
+
+    Enemy::name();
+    Enemy::printStats(Enemy::health(), Enemy::attPower());
 
 
 }

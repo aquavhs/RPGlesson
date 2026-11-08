@@ -1,6 +1,11 @@
 #include <iostream>
 #include "Player.h"
 
+void Player::name()
+{
+	std::cout << "Игорь" << '\n';
+}
+
 int Player::health()
 {
 	int health{ 100 };
