@@ -21,4 +21,7 @@ int main()
 
     Battle::start();
 
+    int enemyAttak = Battle::calculateDamage(Enemy::attPower());
+    std::cout << "Игрок получил урон: " << enemyAttak << '\n';
+
 }
