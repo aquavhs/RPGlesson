@@ -2,6 +2,7 @@
 #include <Windows.h>
 #include "Player.h"
 #include "Enemy.h"
+#include  "battle.h"
 
 
 int main()
@@ -16,5 +17,6 @@ int main()
     Enemy::name();
     Enemy::printStats(Enemy::health(), Enemy::attPower());
 
+    start();
 
 }
