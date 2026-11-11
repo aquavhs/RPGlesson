@@ -1,4 +1,4 @@
-//#include <iostream>
+#include <iostream>
 #include <Windows.h>
 #include "Player.h"
 #include "Enemy.h"
@@ -13,10 +13,12 @@ int main()
 
     Player::name();
     Player::printStats(Player::health(), Player::attPower());
+    std::cout << '\n';
 
     Enemy::name();
     Enemy::printStats(Enemy::health(), Enemy::attPower());
+    std::cout << '\n';
 
-    start();
+    Battle::start();
 
 }

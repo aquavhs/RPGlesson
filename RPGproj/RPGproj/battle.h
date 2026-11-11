@@ -2,10 +2,13 @@
 #define BATTLE_H
 
 
-// Расчитывает урон который наносит атакующий
-int calculateDamage(int powerAtt, int health);
+namespace Battle
+{
+	// Расчитывает урон который наносит атакующий
+	int calculateDamage(int powerAtt);
 
-// Выводит информацию о начале боя
-void start();
+	// Выводит информацию о начале боя
+	void start();
 
 #endif // !BATTLE_H
+}
