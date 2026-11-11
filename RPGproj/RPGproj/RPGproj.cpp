@@ -19,9 +19,8 @@ int main()
     Enemy::printStats(Enemy::health(), Enemy::attPower());
     std::cout << '\n';
 
-    Battle::start();
+    int playerHealth = Player::health();
+    Battle::start(playerHealth);
 
-    int enemyAttak = Battle::calculateDamage(Enemy::attPower());
-    std::cout << "Игрок получил урон: " << enemyAttak << '\n';
 
 }

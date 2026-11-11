@@ -8,7 +8,7 @@ int Battle::calculateDamage(int damage)
 	return damage;
 }
 
-void Battle::start()
+void Battle::start(int health)
 {
 	std::cout << "Бой начинается!" << '\n';
 
@@ -17,5 +17,11 @@ void Battle::start()
 
 	std::cout << "Враг: ";
 	Enemy::name();
+
+	int enemyAttak = Battle::calculateDamage(Enemy::attPower());
+	std::cout << "Игрок получил урон: " << enemyAttak << '\n';
+
+	int damage = health - Battle::calculateDamage(Enemy::attPower());
+	std::cout << "Здоровье игрока: " << damage << '\n';
 
 }
