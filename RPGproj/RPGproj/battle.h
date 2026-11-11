@@ -8,7 +8,7 @@ namespace Battle
 	int calculateDamage(int powerAtt);
 
 	// Выводит информацию о начале боя
-	void start(int health);
+	void start(int playerHealth, int enemyHealth);
 
 
 }

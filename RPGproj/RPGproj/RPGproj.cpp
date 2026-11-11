@@ -20,7 +20,10 @@ int main()
     std::cout << '\n';
 
     int playerHealth = Player::health();
-    Battle::start(playerHealth);
+    int enemyHealth = Enemy::health();
+
+    Battle::start(playerHealth, enemyHealth);
+ 
 
 
 }
