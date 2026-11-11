@@ -10,5 +10,7 @@ namespace Battle
 	// Выводит информацию о начале боя
 	void start();
 
-#endif // !BATTLE_H
+
 }
+
+#endif // !BATTLE_H
