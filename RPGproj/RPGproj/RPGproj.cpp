@@ -19,10 +19,8 @@ int main()
     Enemy::printStats(Enemy::health(), Enemy::attPower());
     std::cout << '\n';
 
-    int playerHealth = Player::health();
-    int enemyHealth = Enemy::health();
 
-    Battle::start(playerHealth, enemyHealth);
+    Battle::start();
  
 
 

@@ -8,7 +8,31 @@ int Battle::calculateDamage(int damage)
 	return damage;
 }
 
-void Battle::start(int playerHealth, int enemtHealth)
+int Battle::calculateHealth(int health)
+{
+	return health;
+}
+
+int Battle::calculatePlayerDamage()
+{
+	int plHealth = Battle::calculateHealth(Player::health());
+	int enDamage = Battle::calculateHealth(Enemy::attPower());
+	int getPlayerHealth = plHealth - enDamage;
+
+	return getPlayerHealth;
+}
+
+int Battle::calculateEnemyDamage()
+{
+	int enHealth = Battle::calculateHealth(Enemy::health());
+	int plDamage = Battle::calculateDamage(Player::attPower());
+	int getEnemyHealth = enHealth - plDamage;
+
+	return getEnemyHealth;
+
+}
+
+void Battle::start()
 {
 	std::cout << "Бой начинается!" << '\n';
 
@@ -18,17 +42,10 @@ void Battle::start(int playerHealth, int enemtHealth)
 	std::cout << "Враг: ";
 	Enemy::name();
 
-	int enemyAttak = Battle::calculateDamage(Enemy::attPower());
-	int plDamage = playerHealth - enemyAttak;
+	std::cout << "Урон Врага: " << Enemy::attPower() << '\n';
+	std::cout << "Урон Игрока: " << Player::attPower() << '\n';
 
-	std::cout << "Игрок получил урон: " << enemyAttak << '\n';
-	std::cout << "Здоровье игрока: " << plDamage << '\n';
-
-
-	int playerAttak = Battle::calculateDamage(Player::attPower());
-	int enDamage = enemtHealth - playerAttak;
-
-	std::cout << "Враг получил урон: " << playerAttak << '\n';
-	std::cout << "Здоровье врага: " << enDamage << '\n';
+	std::cout << "Остаток HP игрока: " << Battle::calculatePlayerDamage() << '\n';
+	std::cout << "Остаток HP врага: " << Battle::calculateEnemyDamage() << '\n';
 
 }
